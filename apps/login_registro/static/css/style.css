@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+
+.welcome{
+    width: 100%;
+    height: 30%;
+    background-color: aquamarine;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+h1{
+    font-family: "Permanent Marker";
+}
+
+.formulario_login{
+    border: aquamarine 5px dashed;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 2%;
+    margin-top: 5%;
+    width: 50%;
+}
+
+.btn-login{
+    background-color: hsl(160, 81%, 85%);
+    border: 1px solid aquamarine;
+}
+
+.btn-login:hover{
+    background-color: aquamarine;
+    border: 1px solid hsl(160, 81%, 85%);
+}
+
+.formulario_registro{
+    border: #fad345 5px dashed;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 2%;
+    margin-top: 2%;
+    width: 50%;
+}
+
+.btn-registro{
+    background-color: #fdecb0;
+    border: 1px solid #fad345;
+    color: black;
+}
+
+.btn-registro:hover{
+    background-color: #fad345;
+    border: 1px solid #fdecb0;
+}
+
+.error-form{
+    color: red;
+}

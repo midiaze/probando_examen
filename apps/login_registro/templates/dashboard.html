@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Panel de Usuario</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid mx-5">
+                <a class="navbar-brand" href="/">Test App</a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="">
+                    <a class="btn btn-outline-danger" href="/logout">Log off</a>
+                </span>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            {% if usuario.user_level == 9 %} 
+                <h1>Manage Users</h1> 
+                <a href="" class="btn btn-warning" >Add new</a>
+            {% else %}
+            <h1>All Users</h1> 
+
+            {% endif %}
+            
+        </div>
+        {% for user in usuarios%}
+        {{ user.email }}
+        {% endfor %}
+        <h1> </h1>
+
+    </div>
+    
+</body>
+</html>
